@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(name='theme-color' content='#000000')
+    title NEM Testnet Faucet
+    = favicon
+    = favicon 'apple-icon.png', rel: 'apple-touch-icon', sizes: '180x180'
+    = favicon 'favicon-32x32.png', rel: 'icon', type: 'image/png', sizes: '32x32'
+    = favicon 'favicon-16x16.png', rel: 'icon', type: 'image/png', sizes: '16x16'
+    = favicon 'android-icon-192x192.png', rel: 'icon', type: 'image/png', sizes: '192x192'
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic')
+    = stylesheet 'beauter', crossorigin: 'anonymous'
+    = stylesheet 'application', crossorigin: 'anonymous'
+    = javascript 'application', async: true
+  body
+    = yield

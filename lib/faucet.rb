@@ -1,0 +1,2 @@
+module Faucet
+end

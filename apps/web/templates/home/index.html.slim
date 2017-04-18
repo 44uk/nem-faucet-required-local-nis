@@ -1,0 +1,55 @@
+ul.topnav
+  li
+    = link_to 'NEM Testnet Pool', routes.root_path, class: 'brand', title: 'NEM Testnet Pool'
+
+.container
+  - if flash[:success]
+    .row
+      .col.m12
+        .alert._success= flash[:success]
+
+  - if flash[:danger]
+    .row
+      .col.m12
+        .alert._danger= flash[:danger]
+
+  = form_drawing
+
+  .row
+    .col.m8
+      label Send back address
+      input._width100(type="text" value="#{ENV['NEM_ADDRESS']}" readonly)
+    .col.m4
+      label pooled XEM
+      input._width100._alignRight(type="text" value="#{pooled_xem}" readonly)
+
+  .row
+    .col.m12
+      h3 Readme
+      ul
+        li Drawing is limited #{ENV['HOURLY_DRAWING_COUNT']} times in an hour.
+        li You can get XEM randomly from #{ENV['NEM_MIN_OUT']} to #{ENV['NEM_MAX_OUT']}.
+        li This is an experimental server, the spec can be change without notice.
+        li Please send back XEM when you need no longer need.
+        li Enjoy NEM development!
+
+.jumbo._dark(style="font-size: 1.2rem; color:white")
+  p
+    span &#x1F4AA; Powered by
+    br
+    = link_to 'NEM - Distributed Ledger Technology (Blockchain)', 'https://www.nem.io/', target: '_blank'
+    br
+    = link_to 'Hanami - The web, with simplicity', 'http://hanamirb.org/', target: '_blank'
+    br
+    = link_to 'Beauter - A simple framework for faster and beautiful responsive sites', 'http://beauter.outboxcraft.com/', target: '_blank'
+    br
+    = link_to 'nis-ruby - Ruby client library for the NEM Infrastructure Server API', 'https://github.com/44uk/nis-ruby/', target: '_blank'
+    br
+    = link_to 'nem-faucet - NEM Faucet App', 'https://github.com/44uk/nem-faucet/', target: '_blank'
+
+  p= link_to '@44uk_i3', 'https://twitter.com/44uk_i3', target: '_blank'
+
+  / p
+  /   span Chip me please!
+  /   br
+  /   = ENV['NEM_TIP_ADDRESS']

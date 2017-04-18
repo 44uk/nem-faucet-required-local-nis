@@ -1,0 +1,19 @@
+{
+  "name": "nem-faucet",
+  "version": "0.0.1",
+  "description": "NEM faucet web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:44uk/nem-faucet.git"
+  },
+  "author": "44uk",
+  "license": "MIT",
+  "homepage": "https://github.com/44uk/nem-faucet",
+  "dependencies": {
+    "@outboxcraft/beauter": "^0.2.3"
+  }
+}

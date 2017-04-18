@@ -1,0 +1,4 @@
+project=faucet
+architecture=container
+test=minitest
+template=slim
