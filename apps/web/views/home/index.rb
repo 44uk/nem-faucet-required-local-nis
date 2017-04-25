@@ -8,11 +8,11 @@ module Web::Views::Home
           div(class: 'col m8') do
             div do
               label :address
-              text_field :address, class: '_width100'
+              text_field :address, class: '_width100', placeholder: 'Address start with a capital T'
             end
             div do
               label :message
-              text_field :message, class: '_width100'
+              text_field :message, class: '_width100', placeholder: '(Optional)'
             end
           end
           div(class: 'col m4') do
