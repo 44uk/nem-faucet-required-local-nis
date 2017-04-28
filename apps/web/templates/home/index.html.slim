@@ -1,6 +1,8 @@
 ul.topnav
   li
-    = link_to 'NEM Testnet Faucet', routes.root_path, class: 'brand', title: 'NEM Testnet Faucet'
+    a(href="#{routes.root_path}" class="brand" title="NEM Testnet Faucet")
+      = image 'nem_logo.svg', class: 'nemlogo', width: 16, height: 16
+      span(style="margin-left:0.5rem") NEM Testnet Faucet
 
 .container
   - if flash[:success]
