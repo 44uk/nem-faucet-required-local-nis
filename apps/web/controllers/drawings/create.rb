@@ -9,7 +9,7 @@ module Web::Controllers::Drawings
 
     def call(params)
       form = DrawingForm.new(
-        address: params.get(:drawing, :address),
+        address: params.get(:drawing, :address).tr('-', ''),
         amount:  xem(range: ENV['NEM_MIN_OUT'].to_i..ENV['NEM_MAX_OUT'].to_i),
         message: params.get(:drawing, :message) || ''
       )
