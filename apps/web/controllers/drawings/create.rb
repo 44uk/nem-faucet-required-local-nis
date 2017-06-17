@@ -60,12 +60,11 @@ module Web::Controllers::Drawings
     end
 
     def request_prepare_announce(address:, amount:, message: '')
-      tx = ::Nis::Struct::Transaction.new(
+      tx = ::Nis::Transaction::Transfer.new(
         amount: amount * 1_000_000,
         recipient: address,
-        signer:  ENV['NEM_PUBLIC_KEY'],
         message: ::Nis::Struct::Message.new(message),
-        type:    ::Nis::Struct::Transaction::TRANSFER,
+        signer:  ENV['NEM_PUBLIC_KEY'],
         timeStamp: ::Nis::Util.timestamp,
         deadline:  ::Nis::Util.timestamp + 43_200,
         version:   ::Nis::Struct::Transaction::TESTNET_VERSION_1
